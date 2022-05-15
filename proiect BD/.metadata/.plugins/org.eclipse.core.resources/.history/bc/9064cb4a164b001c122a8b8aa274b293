@@ -1,0 +1,14 @@
+package temabd;
+
+import javax.swing.JPanel;
+
+public class PanelPersoana extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelPersoana() {
+
+	}
+
+}

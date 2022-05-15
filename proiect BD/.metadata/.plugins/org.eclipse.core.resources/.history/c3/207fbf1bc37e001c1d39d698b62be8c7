@@ -1,0 +1,68 @@
+package temabd;
+
+import javax.swing.JPanel;
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+public class PanelBanca extends JPanel {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * Create the panel.
+	 */
+	
+	private PanelBanca_afisare panelAfis;
+	private Blank panel;
+	private PanelBanca_delete panelDelete;
+	private PanelBanca_insert panelInsert;
+	private PanelBanca_update panelUpdate;
+	
+	public PanelBanca() {
+		setForeground(new Color(0, 0, 0));
+		
+		setBounds(0, 0, 581, 538);
+		setLayout(null);
+		panelAfis=new PanelBanca_afisare();
+		panelAfis.setVisible(true);
+		
+		JButton btnAfisare = new JButton("Afisare");
+		btnAfisare.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) 
+			{
+				
+				panelUpdate.setVisible(false);
+				panelInsert.setVisible(false);
+				panel.setVisible(false);
+				panelDelete.setVisible(false);
+				panelAfis.setVisible(true);
+			}
+		});
+		btnAfisare.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnAfisare.setBounds(10, 42, 129, 33);
+		add(btnAfisare);
+		
+		JButton btnInsert = new JButton("Insert");
+		btnInsert.setFont(new Font("Tahoma", Font.BOLD, 22));
+		btnInsert.setBounds(149, 41, 129, 33);
+		add(btnInsert);
+		
+		JButton btnUpdate = new JButton("Update");
+		btnUpdate.setFont(new Font("Tahoma", Font.BOLD, 22));
+		btnUpdate.setBounds(303, 41, 129, 33);
+		add(btnUpdate);
+		
+		JButton btnDelete = new JButton("Delete");
+		btnDelete.setFont(new Font("Tahoma", Font.BOLD, 22));
+		btnDelete.setBounds(442, 41, 129, 33);
+		add(btnDelete);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(10, 85, 561, 443);
+		add(panel);
+	}
+}

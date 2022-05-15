@@ -1,0 +1,26 @@
+package temabd;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+public class PanelCard extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelCard() {
+		
+		setBounds(0, 0, 580, 538);
+		setLayout(null);
+		setVisible(true);
+		
+		JLabel lblNewLabel = new JLabel("Date Card");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 37));
+		lblNewLabel.setBounds(119, 157, 340, 186);
+		add(lblNewLabel);
+	}
+
+}

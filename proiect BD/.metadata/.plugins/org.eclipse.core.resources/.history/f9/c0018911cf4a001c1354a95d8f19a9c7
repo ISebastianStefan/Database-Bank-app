@@ -1,0 +1,97 @@
+package temabd;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.LineBorder;
+
+public class FrameLogin extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField txtUsername;
+	private JPasswordField txtPassword;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					FrameLogin frame = new FrameLogin();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public FrameLogin() {
+		setUndecorated(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 593, 400);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 139, 139));
+		contentPane.setBorder(new LineBorder(new Color(0, 0, 128), 2));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.WHITE);
+		panel.setBounds(180, 117, 250, 40);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		txtUsername = new JTextField();
+		txtUsername.setFont(new Font("Arial", Font.PLAIN, 12));
+		txtUsername.setText("Username");
+		txtUsername.setBounds(10, 10, 170, 20);
+		panel.add(txtUsername);
+		txtUsername.setColumns(10);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.WHITE);
+		panel_1.setBounds(180, 167, 250, 40);
+		contentPane.add(panel_1);
+		panel_1.setLayout(null);
+		
+		txtPassword = new JPasswordField();
+		txtPassword.setFont(new Font("Arial", Font.PLAIN, 12));
+		txtPassword.setText("Password");
+		txtPassword.setBounds(10, 10, 170, 20);
+		panel_1.add(txtPassword);
+		
+		JPanel pnlBtnLogin = new JPanel();
+		pnlBtnLogin.setBackground(new Color(47, 79, 79));
+		pnlBtnLogin.setBounds(180, 266, 250, 40);
+		contentPane.add(pnlBtnLogin);
+		pnlBtnLogin.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("LOGIN");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setForeground(Color.WHITE);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
+		lblNewLabel.setBounds(96, 10, 48, 20);
+		pnlBtnLogin.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setBounds(538, 10, 45, 13);
+		contentPane.add(lblNewLabel_1);
+		setLocationRelativeTo(null);
+	}
+}

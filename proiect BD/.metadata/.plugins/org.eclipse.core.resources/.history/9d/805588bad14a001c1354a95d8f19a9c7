@@ -1,0 +1,7 @@
+package temabd;
+
+public class Image {
+
+	public static int SCALE_SMOOTH;
+
+}

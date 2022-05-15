@@ -1,0 +1,14 @@
+package temabd;
+
+import javax.swing.JPanel;
+
+public class PanelTranzactie extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelTranzactie() {
+
+	}
+
+}

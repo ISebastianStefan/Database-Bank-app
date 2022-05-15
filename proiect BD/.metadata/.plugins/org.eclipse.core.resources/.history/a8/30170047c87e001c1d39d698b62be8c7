@@ -1,0 +1,87 @@
+package temabd;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.awt.Color;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class PanelBanca_delete extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JTextField idb;
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelBanca_delete() {
+		setLayout(null);
+		
+		JLabel lblIntroducetiDateDespre = new JLabel("Banca dorita a fi eliminata:");
+		lblIntroducetiDateDespre.setToolTipText("");
+		lblIntroducetiDateDespre.setHorizontalAlignment(SwingConstants.CENTER);
+		lblIntroducetiDateDespre.setBackground(new Color(240, 240, 240));
+		lblIntroducetiDateDespre.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblIntroducetiDateDespre.setBounds(10, 51, 561, 86);
+		add(lblIntroducetiDateDespre);
+		
+		JLabel lblIdulBanci = new JLabel("ID-ul Banci");
+		lblIdulBanci.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblIdulBanci.setBounds(116, 235, 107, 34);
+		add(lblIdulBanci);
+		
+		idb = new JTextField();
+		idb.setColumns(10);
+		idb.setBounds(276, 237, 186, 39);
+		add(idb);
+		
+		JButton btnNewButton = new JButton("Executa");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnNewButton.setBounds(276, 329, 186, 31);
+		try {
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) 
+			{
+				String BancaID=idb.getText();
+				String connectionUrl = "jdbc:jtds:sqlserver://DESKTOP-3SAOEFS;instanceName=SQLEXPRESS;databaseName=Gestiunea_cardurilor_la_o_banca;integratedSecurity=true";
+				try
+				{
+					Connection con = DriverManager.getConnection(connectionUrl); 
+				
+					String query="Delete From Banca Where BancaID=('" + BancaID +"')";
+					Statement s = con.createStatement();
+		            s.execute(query);
+					JOptionPane.showMessageDialog(null, "Successfully deleted");
+					con.close();
+				}
+				catch(Exception e1)
+				{
+					System.out.println("error"+e1);
+					JOptionPane.showMessageDialog(null, "UnSuccessfully deleted");
+				}
+			
+			}
+		});
+		btnNewButton.setBounds(330, 421, 186, 31);
+		add(btnNewButton);
+
+	}
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drivers>
+	<provider id="wmi"/>
+	<provider id="athena"/>
+	<provider id="clickhouse"/>
+	<provider id="datavirtuality"/>
+	<provider id="db2"/>
+	<provider id="db2_zos"/>
+	<provider id="db2_i"/>
+	<provider id="elasticsearch"/>
+	<provider id="exasol"/>
+	<provider id="jaybird"/>
+	<provider id="generic"/>
+	<provider id="bigquery"/>
+	<provider id="google_spanner"/>
+	<provider id="greenplum"/>
+	<provider id="h2gis"/>
+	<provider id="hana"/>
+	<provider id="hive"/>
+	<provider id="kognitio"/>
+	<provider id="sqlserver">
+		<driver id="microsoft" category="MS SQL Server" categories="sql" name="SQL Server" class="com.microsoft.sqlserver.jdbc.SQLServerDriver" url="jdbc:sqlserver://{host}[:{port}][;databaseName={database}]" port="1433" defaultDatabase="master" description="Microsoft JDBC Driver for SQL Server (MSSQL)" custom="false">
+			<library type="jar" path="maven:/com.microsoft.sqlserver:mssql-jdbc:RELEASE" custom="false" version="9.2.0.jre8">
+				<file id="com.microsoft.sqlserver:mssql-jdbc" version="9.2.0.jre8" path="${home}\OneDrive\Desktop\Anul 3\SEMESTRUL 1\drivers\maven\maven-central\com.microsoft.sqlserver\mssql-jdbc-9.2.0.jre8.jar"/>
+			</library>
+			<library type="lib" path="maven:/com.microsoft.sqlserver:mssql-jdbc_auth:RELEASE" custom="false" version="9.2.0.x64">
+				<file id="com.microsoft.sqlserver:mssql-jdbc_auth" version="9.2.0.x64" path="${home}\OneDrive\Desktop\Anul 3\SEMESTRUL 1\drivers\maven\maven-central\com.microsoft.sqlserver\mssql-jdbc_auth-9.2.0.x64.dll"/>
+			</library>
+		</driver>
+	</provider>
+	<provider id="mssql"/>
+	<provider id="mysql"/>
+	<provider id="ocient"/>
+	<provider id="open-distro-elasticsearch"/>
+	<provider id="oracle"/>
+	<provider id="postgresql"/>
+	<provider id="snowflake"/>
+	<provider id="sqlite"/>
+	<provider id="vertica"/>
+</drivers>

@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1639336215415" defaultVMConnector\="">\r\n    <vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n        <vm id\="1639336215415" name\="jdk-18" path\="D\:\\Download-Poli\\java-2021-09\\openjdk-18-ea+24_windows-x64_bin\\jdk-18"/>\r\n    </vmType>\r\n</vmSettings>\r\n

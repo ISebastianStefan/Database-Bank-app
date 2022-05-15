@@ -1,0 +1,14 @@
+package temabd;
+
+import javax.swing.JPanel;
+
+public class PanelContract extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelContract() {
+
+	}
+
+}

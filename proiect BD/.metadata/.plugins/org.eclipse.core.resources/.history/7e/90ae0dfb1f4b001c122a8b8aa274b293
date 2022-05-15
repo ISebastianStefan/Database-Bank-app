@@ -1,0 +1,25 @@
+package temabd;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+public class PanelTransfer extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelTransfer() {
+
+		setBounds(0, 0, 580, 538);
+		setLayout(null);
+		
+		JLabel lblDateTransfer = new JLabel("Date Transfer");
+		lblDateTransfer.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDateTransfer.setFont(new Font("Tahoma", Font.BOLD, 37));
+		lblDateTransfer.setBounds(105, 158, 340, 186);
+		add(lblDateTransfer);
+	}
+
+}

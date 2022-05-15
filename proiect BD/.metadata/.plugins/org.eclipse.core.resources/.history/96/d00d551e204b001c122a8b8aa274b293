@@ -1,0 +1,25 @@
+package temabd;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+public class PanelTranzactie extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelTranzactie() {
+
+		setBounds(0, 0, 580, 538);
+		setLayout(null);
+		
+		JLabel lblDateTranzactie = new JLabel("Date Tranzactie");
+		lblDateTranzactie.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDateTranzactie.setFont(new Font("Tahoma", Font.BOLD, 37));
+		lblDateTranzactie.setBounds(105, 152, 340, 186);
+		add(lblDateTranzactie);
+	}
+
+}

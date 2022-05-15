@@ -1,0 +1,35 @@
+{
+	"folders": {},
+	"connections": {
+		"microsoft-17d4699a9c2-3c8b53942613217a": {
+			"provider": "sqlserver",
+			"driver": "microsoft",
+			"name": "Gestiunea_cardurilor_la_o_banca",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "DESKTOP-3SAOEFS\\SQLEXPRESS",
+				"port": "1433",
+				"database": "Gestiunea_cardurilor_la_o_banca",
+				"url": "jdbc:sqlserver://;serverName=DESKTOP-3SAOEFS\\SQLEXPRESS;databaseName=Gestiunea_cardurilor_la_o_banca",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-authentication@": "SQL_SERVER_PASSWORD",
+					"@dbeaver-show-all-schemas@": "false"
+				},
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}

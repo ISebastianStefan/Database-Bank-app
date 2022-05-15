@@ -1,0 +1,25 @@
+package temabd;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+public class PanelBanca extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelBanca() {
+
+		setBounds(0, 0, 580, 538);
+		setLayout(null);
+		
+		JLabel lblDateBanca = new JLabel("Date Banca");
+		lblDateBanca.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDateBanca.setFont(new Font("Tahoma", Font.BOLD, 37));
+		lblDateBanca.setBounds(116, 158, 340, 186);
+		add(lblDateBanca);
+	}
+
+}

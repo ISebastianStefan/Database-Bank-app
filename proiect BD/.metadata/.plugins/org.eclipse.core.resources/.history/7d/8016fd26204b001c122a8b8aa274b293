@@ -1,0 +1,25 @@
+package temabd;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+public class PanelTip extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelTip() {
+
+		setBounds(0, 0, 580, 538);
+		setLayout(null);
+		
+		JLabel lblDateTipCard = new JLabel("Date Tip Card");
+		lblDateTipCard.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDateTipCard.setFont(new Font("Tahoma", Font.BOLD, 37));
+		lblDateTipCard.setBounds(104, 156, 340, 186);
+		add(lblDateTipCard);
+	}
+
+}

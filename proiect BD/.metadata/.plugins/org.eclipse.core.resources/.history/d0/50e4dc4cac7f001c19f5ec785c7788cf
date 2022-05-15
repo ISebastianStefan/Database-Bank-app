@@ -1,0 +1,14 @@
+package temabd;
+
+import javax.swing.JPanel;
+
+public class PanelPosesor_insert extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelPosesor_insert() {
+
+	}
+
+}

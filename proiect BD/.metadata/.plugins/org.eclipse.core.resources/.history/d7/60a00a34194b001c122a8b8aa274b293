@@ -1,0 +1,25 @@
+package temabd;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+public class PanelExit extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelExit() {
+
+		setSize(580, 538);
+		setLayout(null);
+		
+		JLabel lblExit = new JLabel("Exit");
+		lblExit.setHorizontalAlignment(SwingConstants.CENTER);
+		lblExit.setFont(new Font("Tahoma", Font.BOLD, 37));
+		lblExit.setBounds(99, 145, 340, 186);
+		add(lblExit);
+	}
+
+}

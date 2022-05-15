@@ -1,0 +1,25 @@
+package temabd;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+public class PanelPosesor extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelPosesor() {
+
+		setSize(580, 538);
+		setLayout(null);
+		
+		JLabel lblDatePosesor = new JLabel("Date Posesor");
+		lblDatePosesor.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDatePosesor.setFont(new Font("Tahoma", Font.BOLD, 37));
+		lblDatePosesor.setBounds(109, 156, 340, 186);
+		add(lblDatePosesor);
+	}
+
+}

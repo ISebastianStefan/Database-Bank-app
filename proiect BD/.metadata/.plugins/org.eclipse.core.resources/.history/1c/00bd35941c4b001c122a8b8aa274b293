@@ -1,0 +1,25 @@
+package temabd;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+public class PanelContract extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelContract() {
+
+		setSize(580, 538);
+		setLayout(null);
+		
+		JLabel lblDateContract = new JLabel("Date Contract");
+		lblDateContract.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDateContract.setFont(new Font("Tahoma", Font.BOLD, 37));
+		lblDateContract.setBounds(107, 154, 340, 186);
+		add(lblDateContract);
+	}
+
+}
